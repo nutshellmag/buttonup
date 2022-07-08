@@ -1,4 +1,4 @@
-:443 {
+localhost:443 {
 	header Permission-Policy "interest-cohort=(), browsing-topics=(), join-ad-interest-group=(), run-ad-auction=()"
 	header X-Content-Type-Options "nosniff"
 	header X-Frame-Options "DENY"
@@ -11,5 +11,5 @@
 
 	encode zstd gzip
 	reverse_proxy 127.0.0.1:8080
-	tls pub.pem key.pem
+	tls ./pub.pem ./key.pem
 }
