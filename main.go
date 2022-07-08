@@ -43,10 +43,10 @@ func subscribeUser(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Referrer-Policy", "no-referrer")
 	w.Header().Set("Vary", "Origin")
 	w.Header().Set("Strict-Transport-Security", "max-age=31536000;includeSubDomains")
-	w.Header().Set("Cross-Origin-Opener-Policy", "same-origin")
-	w.Header().Set("Cross-Origin-Embedder-Policy", "require-corp")
+	//w.Header().Set("Cross-Origin-Opener-Policy", "same-origin")
+	//w.Header().Set("Cross-Origin-Embedder-Policy", "require-corp")
 	// Comment the line below if being used in production outside of Nutshell
-	w.Header().Set("Content-Security-Policy", "default-src 'none'; style-src 'self'; img-src 'self' https://cdn.nutshellmag.com; font-src https://cdn.nutshellmag.com; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; connect-src 'none'; base-uri 'self'; frame-ancestors 'none'")
+	//w.Header().Set("Content-Security-Policy", "default-src 'none'; style-src 'self'; img-src 'self' https://cdn.nutshellmag.com; font-src https://cdn.nutshellmag.com; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; connect-src 'none'; base-uri 'self'; frame-ancestors 'none'")
 
 	// Fetch email from form data
 	if r.Header.Get("Content-Type") != "application/x-www-form-urlencoded" {
