@@ -1,4 +1,4 @@
-GOCMD: $(which go)
+GOCMD=/opt/homebrew/bin/go
 
 build:
 	$(GOCMD) build -o buttonup
