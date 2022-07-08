@@ -6,7 +6,7 @@ build:
 
 test:
 	./buttonup
-	$(CADDYCMD) run --config=Caddyfile
+	$(CADDYCMD) run --config=devel.Caddyfile
 
 clean:
 	$(GOCMD) clean

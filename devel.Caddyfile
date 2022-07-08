@@ -1,0 +1,14 @@
+localhost {
+	header Permission-Policy "interest-cohort=(), browsing-topics=(), join-ad-interest-group=(), run-ad-auction=()"
+	header X-Content-Type-Options "nosniff"
+	header X-Frame-Options "DENY"
+	header Referrer-Policy "no-referrer"
+	header Vary "Origin"
+	header Strict-Transport-Security "max-age=31536000;includeSubDomains"
+	header Cross-Origin-Opener-Policy "same-origin"
+	header Cross-Origin-Embedder-Policy "require-corp"
+	header Content-Security-Policy "default-src 'none'; style-src 'self'; img-src 'self' https://cdn.nutshellmag.com; font-src https://cdn.nutshellmag.com; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content; object-src 'none'; connect-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:8080
+}
