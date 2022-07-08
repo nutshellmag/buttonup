@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /subscribed.html
+Disallow: /unsub.html
